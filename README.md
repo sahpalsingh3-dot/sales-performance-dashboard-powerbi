@@ -1,26 +1,41 @@
 # Sales Performance Dashboard (Power BI)
 
-## 📊 Project Overview
-This project analyzes sales performance across regions and time using Power BI. It focuses on identifying trends, regional performance, and business insights using interactive dashboards.
+## Project Overview
+This project analyzes sales performance across regions and time using Power BI. The goal is to monitor KPI performance, identify top- and low-performing regions, and track monthly sales trends using interactive visuals.
 
-## 🛠 Tools Used
+## Business Goal
+Help decision-makers answer:
+- Are sales meeting targets?
+- Which regions and categories drive performance?
+- How are sales trending over time?
+- Is month-over-month growth improving or declining?
+
+## Tools Used
 - Power BI
-- DAX (Data Analysis Expressions)
-- Data Modeling (Star Schema)
+- DAX
+- Data Modeling
+- Time Intelligence
 
-## 📌 Key Features
-- KPI Cards: Total Sales, Total Target, Achievement %, Performance Status
-- Regional Analysis with ranking and contribution %
-- Time Intelligence: YTD and Month-over-Month Growth
-- Interactive slicers (Region, Year, Month, Segment, Category)
+## Data Model
+- Fact table: sales_project_dataset
+- Dimension table: DateTable
+- Relationship: DateTable[Date] → sales_project_dataset[Order Date]
 
-## 📈 Insights
-- Sales fluctuate across months with multiple periods of decline.
-- Negative MoM growth observed in several months.
-- YTD sales show consistent growth despite short-term volatility.
-- North region contributes the highest share of revenue.
+## Key Features
+- KPI cards: Total Sales, Total Target, Achievement %, Performance Status
+- Region analysis with contribution % and ranking
+- Product/category breakdown
+- Time analysis with YTD and MoM Growth
+- Interactive slicers for Region, Year, Month, Segment, and Category
 
-## 📷 Dashboard Preview
+## Key Insights
+- Sales show fluctuating trends across months.
+- Several months exhibit negative month-over-month growth.
+- YTD sales continue to increase despite short-term volatility.
+- Electronics is the strongest revenue-driving category.
+- Regional performance varies, with contribution and ranking visible on the overview page.
+
+## Dashboard Preview
 
 ### Overview Page
 ![Overview](overview.png)
@@ -28,6 +43,7 @@ This project analyzes sales performance across regions and time using Power BI. 
 ### Trend Analysis Page
 ![Trend](trend.png)
 
-## 📁 Files
+## Files
 - Sales_Analysis_Dashboard.pbix
-- 
+- overview.png
+- trend.png
